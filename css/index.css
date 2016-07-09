@@ -1,0 +1,19 @@
+#description{
+    margin: 10%;
+    text-align: left;
+    font-family:Papyrus,fantasy;
+    font-size:18;
+    width:50%;
+}
+
+
+a:link {
+    color: #0099ff;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
