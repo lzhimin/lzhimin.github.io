@@ -81,9 +81,12 @@ function minkowski_2D_Point(l){
 }
 
 function minkowski_l_change_event(){
-    $('#canvas').empty();
-    var data = minkowski_2D_Point($('#minkowski_l').val());
-    draw_2D_scatter_plot(data);
+	
+	console.log($('#distance_option').val());
+	
+    	$('#canvas').empty();
+    	var data = minkowski_2D_Point($('#minkowski_l').val());
+    	draw_2D_scatter_plot(data);
 }
 
 function inital(){
