@@ -177,7 +177,7 @@ function n_dimension_data_generator(N, Size=20){
     for(var s = 0; s < Size; s++){
         var data = [];
         for(var i = 0; i < N; i++)
-            data.push(Math.random());
+            data.push(Math.floor(Math.random()*100));
         datamatrix.push(data);
     }
     return datamatrix;
