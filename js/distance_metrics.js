@@ -65,17 +65,37 @@ function Square_Euclidean(d1, d2){
 
 //Shannon's entropy family
 function Kullback_Leibler(d1, d2){
-    var  sum = 0;
+    var D1   = 0.0,
+        D2   = 0.0,
+        sum  = 0.0;
+    $.each(d1,function(i, d){
+        D1 += d; 
+    });
+
+    $.each(d2,function(i, d){
+        D2 += d;
+    })
+
     for(var i = 0; i < d1.length; i++){
-        sum += d1[i]*Math.log(d1[i]/d2[i]);
+        sum += (d1[i]/D1)*Math.log((d1[i]/D1) /(d2[i]/D2));
     }
     return sum
 }
 
 function K_Divergence(d1, d2){
-    var  sum = 0;
+    var D1   = 0.0,
+        D2   = 0.0,
+        sum  = 0.0;
+
+    $.each(d1,function(i, d){
+        D1 += d; 
+    });
+
+    $.each(d2,function(i, d){
+        D2 += d;
+    });
     for(var i = 0; i < d1.length; i++){
-        sum += d1[i]*Math.log(d1[i]*2/(d1[i] + d2[i]));
+        sum += (d1[i]/D1)*Math.log((d1[i]/D1)*2/((d1[i]/D1) + (d2[i]/D2)));
     }
     return sum
 }
@@ -91,9 +111,20 @@ function Hellinger(d1, d2){
 }
 
 function Bhattacharyya(d1, d2){
-    var sum = 0;
+    var D1   = 0.0,
+        D2   = 0.0,
+        sum  = 0.0;
+
+    $.each(d1,function(i, d){
+        D1 += d; 
+    });
+
+    $.each(d2,function(i, d){
+        D2 += d;
+    })
+
     for(var i = 0, l = d1.length; i < l; i++){
-        sum += Math.sqrt(d1[i] * d2[i]);
+        sum += Math.sqrt((d1[i]/D1) * (d2[i]/D2));
     }
     return -Math.log(sum)
 }
