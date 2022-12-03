@@ -1,0 +1,45 @@
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="http://threejs.org/build/three.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../css/distance.css">
+<title>Distance</title>
+
+</head>
+<body>
+    <div id='top'>
+        <label style="color: white;margin-top: 1%;"><font size="6">Distance Research</font></label>
+    </div>
+    <div id='container'>
+        <div id='menu'>
+            <form style="margin: 10px;">
+                <label>distance </label>
+                <select id='distance_option'>
+                    <option>minkowski       </option>
+                </select>
+                <span id='minkowski_span'>
+                    <label> L </label>
+                    <input type='number' max="100" min="0.1" step='0.1' value='1' id='minkowski_l'/>
+                </span>
+                <br>
+                <span id='dimension_span'>
+                    <label> Dimension</label>
+                    <input type='number' max="1000" min="2" step='1' value='2' id='dimension_n'/>
+                </span>
+            </form>
+        </div>
+
+        <div id='canvas'>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src='../js/event.js' charset="utf-8"></script>
+<script src='../js/distance_metrics.js' charset="utf-8"></script>
+<script src='../js/distance.js'         charset="utf-8"></script>
