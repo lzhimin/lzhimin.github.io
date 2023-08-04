@@ -22,8 +22,10 @@ a:hover {
     width: 300px;
     height: 200px;
 }
+.paper-info-block{
+    margin-top: 15px;
+}
 
-.paper-author{
-    margin-top: 10px;
-    font-size:18;
+.paper-title{
+    font-size:20;
 }
