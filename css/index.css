@@ -20,6 +20,7 @@ a:hover {
     border: 10px solid transparent;
     width: 300px;
     height: 200px;
+    object-fit: contain;
 }
 .paper-info-block{
     margin-top: 5px;
