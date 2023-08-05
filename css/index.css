@@ -1,7 +1,6 @@
 .description{
     margin: 5%;
     text-align: left;
-    font-size:18;
     width:90%;
 }
 
@@ -23,9 +22,9 @@ a:hover {
     height: 200px;
 }
 .paper-info-block{
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
 .paper-title{
-    font-size:20;
+    font-size:18;
 }
