@@ -1,5 +1,6 @@
 .description{
-    margin: 5%;
+    margin-left: 10px;
+    margin-top: 20px;
     text-align: left;
     width:90%;
 }
@@ -18,14 +19,21 @@ a:hover {
 
 .paper-image-small{
     border: 10px solid transparent;
-    width: 300px;
-    height: 200px;
+    width: 100%;
+    min-width: 50px;
+    max-width: 250px;
     object-fit: contain;
+}
+.paper-image{
+    border: 10px solid transparent;
+    width: 100%;
+    min-width: 50;
+    max-width: 250;
 }
 .paper-info-block{
     margin-top: 5px;
 }
 
 .paper-title{
-    font-size:18;
+    font-size:16px;
 }
