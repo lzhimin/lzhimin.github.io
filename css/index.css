@@ -37,3 +37,10 @@ a:hover {
 .paper-title{
     font-size:16px;
 }
+
+.paper-pdf-link{
+    color: #0099ff;
+}
+.paper-video-link{
+    color: #EF6D3D;
+}
