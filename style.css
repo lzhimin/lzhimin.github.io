@@ -142,3 +142,7 @@ ul.main-menu li a.active {
 
 
 
+.text_highlight{
+  font-style: italic; 
+  color: #EF6D3D;
+}
