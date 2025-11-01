@@ -16,12 +16,12 @@
     <meta name="description" content="A brief description of my researchership and interests.">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-    <!-- Favicon (uncomment if you have one) -->
-    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- Stylesheets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
     <link href="css/index.css" rel="stylesheet" type="text/css">
 
@@ -35,56 +35,141 @@
 </head>
 <body>
     <header id="header">
-        <div>
-            <img src="assets/images/cat.jpg" alt="A cat image" style="vertical-align:middle;">
-            <span style="padding: 10px;">
-                <a href="https://scholar.google.com/citations?hl=en&user=hIj-ciYAAAAJ">Google Scholar</a>
-            </span>
-            <span style="padding: 10px;">
-                <a href="https://www.linkedin.com/in/zhimin-li-95930381/">LinkedIn</a>
-            </span>
-            <span>Email: lzm.zhimin@gmail.com</span>
-            <br>
+        <div class="header-top">
+            <img src="assets/images/cat.jpg" alt="Zhimin Li - Profile Photo" class="profile-image">
+            <div class="header-info">
+                <h1>Zhimin Li</h1>
+                <p class="header-subtitle">Postdoctoral Researcher at Vanderbilt University</p>
+                <div class="social-links">
+                    <a href="https://scholar.google.com/citations?hl=en&user=hIj-ciYAAAAJ" class="social-link" aria-label="Google Scholar">Google Scholar</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.linkedin.com/in/zhimin-li-95930381/" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+                    <span class="separator">|</span>
+                    <a href="mailto:lzm.zhimin@gmail.com" class="social-link" aria-label="Email">lzm.zhimin@gmail.com</a>
+                    <span class="separator">|</span>
+                    <a href="assets/pdf/CV.pdf" class="social-link" aria-label="CV">[CV]</a>
+                </div>
+            </div>
         </div>
         
-        <div style="margin-left: 10px;">
-            <h1></h1>
+        <div class="header-bio">
             <p>
                 Hi, my name is Li (last name), Zhimin (first name). In Chinese, I am called 李智闽. 
                 I obtained both my Bachelor's and Ph.D. degrees from the University of Utah, where I was supervised 
-                by <a href="http://www.pascucci.org/">Valerio Pascucci</a> at the 
+                by <a href="https://www.pascucci.org/">Valerio Pascucci</a> at the 
                 <a href="https://www.sci.utah.edu/">Scientific Computing and Imaging Institute</a>.
                  Currently, I am working with 
                 <a href="https://engineering.vanderbilt.edu/bio/?pid=matthew-berger">Matthew Berger</a> and 
-                <a href="https://jalevine.bitbucket.io/">Joshua A. Levine</a> as a postdoctoral researcher at Vanderbilt University. My research interests lie in the Visualization, High Performance Computing, and XAI.
-                <span style="font-size: large;">[<a href="assets/pdf/CV.pdf">CV</a>]</span>.
+                <a href="https://jalevine.bitbucket.io/">Joshua A. Levine</a> as a postdoctoral researcher at Vanderbilt University. 
+                My research interests lie in the Visualization, High Performance Computing, and machine learning.
             </p>
         </div>
     </header>
    
+    <!-- News Section (Separate Section) -->
+    <div id="news-section">
+        <div class="inner">
+            <div class="description">
+                <h4>Latest News</h4>
+                <div style="margin-top: 20px;">
+                    <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <strong>09/18/2025: </strong>"An Evaluation-Centric Paradigm..." is accepted by <strong>1st Workshop on GenAI, Agents, and the Future of VIS </strong>.
+                    </div>
+                    <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <strong>08/08/2025: </strong>"Seeing the Many..." is accepted by <strong>IEEE Workshop on Uncertainty Visualization</strong>.
+                    </div>
+                    <div style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                        <strong>12/03/2024: </strong>"Understanding Robustness Lottery..." is accepted to <strong>TVCG</strong>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Publication Section (Separate Section) -->
     <div id="container">
         <div class="inner">
             <div id="content">
-                <!-- Main navigation -->
-                <ul class="main-menu">
-                    <li><a href="#Publication">Publication</a></li>
-                    <li><a href="#News">News</a></li>
-                    <li><a href="#Blog">Blog</a></li>
-                </ul>
-
                 <!-- Publication Section -->
-                <div id="Publication" class="content-region hide">
-                    <div class="description container">
-                        <div class="row">
-                            <h4>Full Paper Publication</h4>
-                        </div>
+                <div id="Publication" class="description">
+                    <div class="row">
+                        <h4>Full Paper Publication</h4>
+                    </div>
 
-                        <!-- Publication [1] -->
+                        <!-- Publication [1] - Under Submission -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[1] Visualization Literacy of Multimodal Large Language Models: A Comparative Study</strong>
+                                        <strong>[1] See or Recall: A Sanity Check for the Role of Vision in Solving Visualization Understanding Tasks with Multimodal LLMs</strong>
+                                    </span>
+                                    <br>
+                                    <span class="paper-author">
+                                        <strong class="text_highlight">Zhimin Li</strong>, Haichao Miao, Xinyuan Yan, Valerio Pascucci, Matthew Berger, Shusen Liu
+                                    </span>
+                                    <br>
+                                    <span class="paper-conference">(Under Submission)</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Publication [2] - Under Submission -->
+                        <div class="row">
+                            <div class="col-7 paper-info-block">
+                                <p class="pubs">
+                                    <span class="paper-title">
+                                        <strong>[2] Quantifying the Impact of Lossy Compression on Neural Generative Surrogate Modeling</strong>
+                                    </span>
+                                    <br>
+                                    <span class="paper-author">
+                                        <strong class="text_highlight">Zhimin Li</strong>, Harshitha Menon, Charles Fredrick Jekel, Peter Lindstrom, Valerio Pascucci
+                                    </span>
+                                    <br>
+                                    <span class="paper-conference">(IPDPS Under Submission)</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Publication [3] - Workshop 2025 -->
+                        <div class="row">
+                            <div class="col-7 paper-info-block">
+                                <p class="pubs">
+                                    <span class="paper-title">
+                                        <strong>[3] Seeing the Many: Exploring Parameter Distributions Conditioned on Features in Surrogates</strong>
+                                    </span>
+                                    <br>
+                                    <span class="paper-author">
+                                        Xiaohan Wang, <strong class="text_highlight">Zhimin Li</strong>, Joshua A. Levine, Matthew Berger
+                                    </span>
+                                    <br>
+                                    <span class="paper-conference">IEEE Workshop on Uncertainty Visualization: Unraveling Relationships of Uncertainty, AI, and Decision-Making (2025)</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Publication [4] - Workshop 2025 -->
+                        <div class="row">
+                            <div class="col-7 paper-info-block">
+                                <p class="pubs">
+                                    <span class="paper-title">
+                                        <strong>[4] An Evaluation-Centric Paradigm for Scientific Visualization Agents</strong>
+                                    </span>
+                                    <br>
+                                    <span class="paper-author">
+                                        Kuangshi Ai, Haichao Miao, <strong class="text_highlight">Zhimin Li</strong>, Chaoli Wang, Shusen Liu
+                                    </span>
+                                    <br>
+                                    <span class="paper-conference">1st Workshop on GenAI, Agents, and the Future of VIS (IEEE VIS 2025)</span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Publication [5] - arXiv 2024 -->
+                        <div class="row">
+                            <div class="col-7 paper-info-block">
+                                <p class="pubs">
+                                    <span class="paper-title">
+                                        <strong>[5] Visualization Literacy of Multimodal Large Language Models: A Comparative Study</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
@@ -100,54 +185,12 @@
                             </div>
                         </div>
 
-                        <!-- Publication [2] -->
+                        <!-- Publication [6] - TVCG 2024 -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[2] AVA: Towards Autonomous Visualization Agents through Visual Perception-Driven Decision-Making</strong>
-                                    </span>
-                                    <br>
-                                    <span class="paper-author">
-                                        Shusen Liu, Haichao Miao, <strong class="text_highlight">Zhimin Li</strong>, Matthew Olson, Valerio Pascucci, Peer-Timo Bremer
-                                    </span>
-                                    <br>
-                                    <span class="paper-conference">(Computer Graphics Forum 2024)</span>
-                                    <br>
-                                    <span class="paper-link">
-                                        <a href="https://arxiv.org/abs/2312.04494" class="paper-pdf-link">[paper]</a>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Publication [3] -->
-                        <div class="row">
-                            <div class="col-7 paper-info-block">
-                                <p class="pubs">
-                                    <span class="paper-title">
-                                        <strong>[3] Instance-wise Linearization of Neural Network for Model Interpretation</strong>
-                                    </span>
-                                    <br>
-                                    <span class="paper-author">
-                                        <strong class="text_highlight">Zhimin Li</strong>, Shusen Liu, Kailkhura Bhavya, Peer-Timo Bremer, Valerio Pascucci
-                                    </span>
-                                    <br>
-                                    <span class="paper-conference">(arXiv 2023)</span>
-                                    <br>
-                                    <span class="paper-link">
-                                        <a href="https://arxiv.org/abs/2310.16295" class="paper-pdf-link">[paper]</a>
-                                    </span>
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Publication [4] -->
-                        <div class="row">
-                            <div class="col-7 paper-info-block">
-                                <p class="pubs">
-                                    <span class="paper-title">
-                                        <strong>[4] Understanding Robustness Lottery: A Geometric Visual Comparative Analysis of Neural Network Pruning Approaches</strong>
+                                        <strong>[6] Understanding Robustness Lottery: A Geometric Visual Comparative Analysis of Neural Network Pruning Approaches</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
@@ -166,12 +209,54 @@
                             </div>
                         </div>
 
-                        <!-- Publication [5] -->
+                        <!-- Publication [7] - CGF 2024 -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[5] A Visual Comparison of Silent Error Propagation</strong>
+                                        <strong>[7] AVA: Towards Autonomous Visualization Agents through Visual Perception-Driven Decision-Making</strong>
+                                    </span>
+                                    <br>
+                                    <span class="paper-author">
+                                        Shusen Liu, Haichao Miao, <strong class="text_highlight">Zhimin Li</strong>, Matthew Olson, Valerio Pascucci, Peer-Timo Bremer
+                                    </span>
+                                    <br>
+                                    <span class="paper-conference">Computer Graphics Forum (2024)</span>
+                                    <br>
+                                    <span class="paper-link">
+                                        <a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.15093" class="paper-pdf-link">[paper]</a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Publication [8] - arXiv 2023 -->
+                        <div class="row">
+                            <div class="col-7 paper-info-block">
+                                <p class="pubs">
+                                    <span class="paper-title">
+                                        <strong>[8] Instance-wise Linearization of Neural Network for Model Interpretation</strong>
+                                    </span>
+                                    <br>
+                                    <span class="paper-author">
+                                        <strong class="text_highlight">Zhimin Li</strong>, Shusen Liu, Kailkhura Bhavya, Peer-Timo Bremer, Valerio Pascucci
+                                    </span>
+                                    <br>
+                                    <span class="paper-conference">(arXiv 2023)</span>
+                                    <br>
+                                    <span class="paper-link">
+                                        <a href="https://arxiv.org/abs/2310.16295" class="paper-pdf-link">[paper]</a>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Publication [9] - TVCG 2022 -->
+                        <div class="row">
+                            <div class="col-7 paper-info-block">
+                                <p class="pubs">
+                                    <span class="paper-title">
+                                        <strong>[9] A Visual Comparison of Silent Error Propagation</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
@@ -190,12 +275,12 @@
                             </div>
                         </div>
 
-                        <!-- Publication [6] -->
+                        <!-- Publication [10] - PPOPP 2021 -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[6] Understanding a program's resiliency through error propagation</strong>
+                                        <strong>[10] Understanding a Program's Resiliency through Error Propagation</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
@@ -214,12 +299,12 @@
                             </div>
                         </div>
 
-                        <!-- Publication [7] -->
+                        <!-- Publication [11] - TVCG 2021 -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[7] SpotSDC: Revealing the Silent Data Corruption Propagation in High-Performance Computing Systems</strong>
+                                        <strong>[11] SpotSDC: Revealing the Silent Data Corruption Propagation in High-Performance Computing Systems</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
@@ -236,19 +321,19 @@
                             </div>
                         </div>
 
-                        <!-- Publication [8] -->
+                        <!-- Publication [12] - TVCG 2019 -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[8] NLIZE: A Perturbation-Driven Visual Interrogation Tool for Analyzing and Interpreting Natural Language Inference Models</strong>
+                                        <strong>[12] NLIZE: A Perturbation-Driven Visual Interrogation Tool for Analyzing and Interpreting Natural Language Inference Models</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
                                         Shusen Liu, <strong class="text_highlight">Zhimin Li</strong>, Tao Li, Srikumar Vivek, Valerio Pascucci, Peer-Timo Bremer
                                     </span>
                                     <br>
-                                    <span class="paper-conference">IEEE Visualization Conference 2018 (TVCG)</span>
+                                    <span class="paper-conference">IEEE Transactions on Visualization and Computer Graphics (TVCG 2019)</span>
                                     <br>
                                     <span class="paper-link">
                                         <a href="https://www.osti.gov/pages/servlets/purl/1562803" class="paper-pdf-link">[paper]</a>
@@ -258,12 +343,12 @@
                             </div>
                         </div>
 
-                        <!-- Publication [9] -->
+                        <!-- Publication [13] - EMNLP 2018 -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[9] Visual Interrogation of Attention-Based Models for Natural Language Inference and Machine Comprehension</strong>
+                                        <strong>[13] Visual Interrogation of Attention-Based Models for Natural Language Inference and Machine Comprehension</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
@@ -282,19 +367,19 @@
                             </div>
                         </div>
 
-                        <!-- Publication [10] -->
+                        <!-- Publication [14] - UROP 2016 -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[10] Grand-Map: A High Dimensional Grand Tour Map</strong>
+                                        <strong>[14] Grand-Map: A High-Dimensional Grand Tour Map</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
-                                        <strong class="text_highlight">Zhimin Li</strong>, Shusen Liu, Valerio Pascucci
+                                        <strong class="text_highlight">Zhimin Li</strong>
                                     </span>
                                     <br>
-                                    <span class="paper-conference">UROP (2016)</span>
+                                    <span class="paper-conference">Utah UROP (2016)</span>
                                     <br>
                                     <span class="paper-link">
                                         <a href="assets/pdf/grandmap2016.pdf" class="paper-pdf-link">[paper]</a>
@@ -308,29 +393,29 @@
                             <h4>Poster and Demo</h4>
                         </div>
 
-                        <!-- Poster [11] -->
+                        <!-- Poster [15] -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[11] An Information Visualization System to Analyze Silent Data Corruption</strong>
+                                        <strong>[15] An Information Visualization System to Analyze Silent Data Corruption</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
-                                        <strong class="text_highlight">Zhimin Li</strong>, Harshitha Menon, Kathryn Mohror, Yarden Livant, Valerio Pascucci
+                                        <strong class="text_highlight">Zhimin Li</strong>, Harshitha Menon, Yarden Livant, Kathryn Mohror, Valerio Pascucci
                                     </span>
                                     <br>
-                                    <span class="paper-conference">SC(2018) Poster</span>
+                                    <span class="paper-conference">The International Conference for High Performance Computing, Networking, Storage, and Analysis (SC 2018) Poster</span>
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Demo [12] -->
+                        <!-- Demo [16] -->
                         <div class="row">
                             <div class="col-7 paper-info-block">
                                 <p class="pubs">
                                     <span class="paper-title">
-                                        <strong>[12] Why and when do students change majors?</strong>
+                                        <strong>[16] Why and when do students change majors?</strong>
                                     </span>
                                     <br>
                                     <span class="paper-author">
@@ -341,17 +426,6 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- News Section -->
-                <div id="News" class="content-region hide description">
-                    <!-- Content for News goes here -->
-                </div>
-
-                <!-- Blog Section (if needed) -->
-                <div id="Blog" class="content-region hide description">
-                    <!-- Content for Blog goes here -->
                 </div>
 
             </div>

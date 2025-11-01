@@ -5,6 +5,21 @@
 /* html is set to 62.5% so that all the REM measurements are based on 10px sizing. So basically 1.5rem = 15px */
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(255, 191, 0, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(255, 191, 0, 0.3);
+  color: #ffffff;
 }
 body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
@@ -12,6 +27,9 @@ body {
   font-weight: 400;
   font-family: "Roboto", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
+  max-width: 800px;
+  margin: 25px auto;
+  transition: all 0.3s ease;
 }
 
 /**
@@ -23,7 +41,9 @@ a {
   color:#ffbf00;
 }
 a:focus {
-  outline: thin dotted;
+  outline: 2px solid #ffbf00;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 small {
@@ -57,9 +77,6 @@ h6 { font-size: 1.4rem; line-height: 1.6;  letter-spacing: 0; }
  */
 p {
   margin: 0 auto 1.5em auto; /* bottom margin for paragraphs */
-}
-p + p {
-
 }
 
 /**
@@ -96,17 +113,95 @@ html {
   background:url();/*background.jpg) center center no-repeat fixed;*/
   background-size:cover;
 }
-body {
-  max-width:800px;
-  margin:25px auto;
-}
-header, #content, footer { 
+header, #content, footer, #news-section { 
   background: rgba(0,0,0,.8); 
   padding:25px;
-  color:#FFFFFF; 
+  color:#FFFFFF;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
-header img {
-  margin: 10px;
+
+header {
+  margin-bottom: 25px;
+}
+
+#news-section {
+  margin-top: 0;
+}
+/* Header Layout */
+.header-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffbf00;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 191, 0, 0.2);
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 191, 0, 0.4);
+}
+
+.header-info {
+  flex: 1;
+}
+
+.header-info h1 {
+  margin-bottom: 8px;
+  font-size: 3.2rem;
+}
+
+.header-subtitle {
+  font-size: 1.6rem;
+  color: #cfd2da;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 1.4rem;
+}
+
+.social-link {
+  color: #0099ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ffbf00;
+  text-decoration: underline;
+}
+
+.separator {
+  color: #666;
+  margin: 0 5px;
+}
+
+.header-bio {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-bio p {
+  line-height: 1.8;
+  font-size: 1.5rem;
 }
 
 /* Menu Links */
@@ -123,13 +218,21 @@ ul.main-menu li a {
   font-size:2.0rem;
   border-bottom: solid transparent 3px;
   color:#cfd2da;
+  transition: all 0.3s ease;
+  padding-bottom: 5px;
 }
 ul.main-menu li a:hover {
   color:#FFFFFF;
+  transform: translateY(-2px);
 }
 ul.main-menu li a.active {
   color:#FFFFFF;
   border-bottom-color:#ffbf00;
+}
+ul.main-menu li a:focus {
+  outline: 2px solid #ffbf00;
+  outline-offset: 4px;
+  border-radius: 3px;
 }
 
 /* Utility classes */
@@ -150,4 +253,129 @@ ul.main-menu li a.active {
 
 .clustr-wrap {
   max-width: 300px;
+  margin: 0 auto;
+  min-height: 200px;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(0,0,0,.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  body {
+    margin: 10px auto;
+    padding: 0 10px;
+  }
+  
+  header, #content, footer {
+    padding: 15px;
+  }
+  
+  /* Header responsive */
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .header-info h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .social-links {
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  
+  .separator {
+    display: none;
+  }
+  
+  .social-links::before {
+    content: '';
+  }
+  
+  /* Typography adjustments */
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.4rem; }
+  h3 { font-size: 2.0rem; }
+  h4 { font-size: 1.6rem; }
+  
+  /* Menu adjustments */
+  ul.main-menu {
+    justify-content: center;
+  }
+  
+  ul.main-menu li a {
+    font-size: 1.6rem;
+    margin-right: 10px;
+  }
+  
+  /* Description adjustments */
+  .description {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    margin: 5px auto;
+    padding: 0 5px;
+  }
+  
+  header, #content, footer {
+    padding: 12px;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .header-info h1 {
+    font-size: 2.0rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  h3 { font-size: 1.6rem; }
+  h4 { font-size: 1.4rem; }
+  
+  ul.main-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  ul.main-menu li {
+    margin-bottom: 8px;
+  }
+  
+  ul.main-menu li a {
+    font-size: 1.4rem;
+  }
 }
